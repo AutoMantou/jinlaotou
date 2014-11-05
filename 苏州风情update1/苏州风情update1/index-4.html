@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>联系我们</title>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/form.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/TMForm.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script>
+		$(document).ready(function(){
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+		<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body>
+<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								<li><a href="index.html">首页</a></li>
+								<li><a href="index-1.html">游</a></li>
+								<li><a href="index-2.html">吃</a></li>
+								<li><a href="index-3.html">住</a></li>
+								<li><a href="index-5.html">BLOG</a></li>
+								<li class="current"><a href="index-4.html">联系我们</a></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					<h1>
+						<a href="index.html">
+							<img src="images/logo.png" alt="Your Happy Family" align="absmiddle">
+						</a>
+						<br />
+						<br />
+						<div align="center"><h2>苏州风情</h2></div>
+					</h1>
+				</div>
+			</div>
+		</header>
+<!--==============================Content=================================-->
+		<div class="content"><div class="ic">More Website Templates @ cssmoban.com - February 10, 2014!</div>
+			<div class="container_12">
+				<div class="clear"></div>
+				<div class="grid_6">
+					<h3>酒店预定</h3>
+					<form id="bookingForm">
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Name" placeHolder="姓名:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+							</div>
+							<div class="tmInput">
+								<input name="Country" placeHolder="来自:" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
+							</div>
+							<div class="tmInput mr0">
+								<input name="Hotel" placeHolder="酒店名称:" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+						<div class="clear"></div>
+						<strong>入住日期</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-in" placeHolder='10/05/2014' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<strong>离店日期</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-out" placeHolder='20/05/2014' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<div class="tmRadio">
+							<p>选择房型</p>
+							<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+							<span>经济型</span>
+							<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+							<span>标准型</span>
+							<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+							<span>豪华型</span>
+						</div>
+						<div class="clear"></div>
+						<div class="fl1 fl2">
+							<em>成人数</em>
+							<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>1</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+							<div class="clear"></div>
+							<em>房间数</em>
+							<select name="Rooms" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>1</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+						<div class="fl1 fl2">
+							<em>儿童数</em>
+							<select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>0</option>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</div>
+						<div class="clear"></div>
+						<div class="tmTextarea">
+							<textarea name="Message" placeHolder="留言" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+						</div>
+						<a href="#" class="btn" data-type="submit">确定</a>
+					</form>
+				</div>
+				<div class="grid_5 prefix_1">
+					<h3>欢迎光临</h3>
+					<img src="images/page1_img1.jpg" alt="" class="img_inner fleft">
+					<div class="extra_wrapper">
+						<p>从这里开始您的苏州之旅</p>
+						在这里您可以选择预订酒店或与我们联系，为您安排更加合理的行程计划与路线
+					</div>
+					<div class="clear cl1"></div>
+					<p><span class="col1"><a href="index.html">在首页可浏览我们为您推荐的旅游景点 </a></span> </p>
+					<p><span class="col1"><a href="index-1.html">在‘游’可查看苏州所有游玩景点</a></span> </p>如果有任何意见或建议，请在下方给我们留言，thanks！
+					</form>
+				</div>
+				<div class="grid_5 prefix_1">
+					<h3>给我们留言</h3>
+					<form id="form">
+						<div class="success_wrapper">
+							<div class="success-message">Contact form submitted</div>
+						</div>
+						<label class="name">
+							<input type="text" placeholder="姓名:" data-constraints="@Required @JustLetters" />
+							<span class="empty-message">*This field is required.</span>
+							<span class="error-message">*This is not a valid name.</span>
+						</label>
+						<label class="email">
+							<input type="text" placeholder="Email:" data-constraints="@Required @Email" />
+							<span class="empty-message">*This field is required.</span>
+							<span class="error-message">*This is not a valid email.</span>
+						</label>
+						<label class="country">
+							<input type="text" placeholder="来自:" data-constraints="@Required @JustLetters"/>
+							<span class="empty-message">*This field is required.</span>
+							<span class="error-message">*This is not a valid phone.</span>
+						</label>
+						<label class="message">
+							<textarea placeholder="留言:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+							<span class="empty-message">*This field is required.</span>
+							<span class="error-message">*The message is too short.</span>
+						</label>
+						<div>
+							<div class="clear"></div>
+							<div class="btns">
+								<a href="#" data-type="reset" class="btn">清空</a>
+								<a href="#" data-type="submit" class="btn">确定</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="socials">
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-google-plus"></a>
+					</div>
+					<div class="copy">
+						郑维晟罡 2014.10.19 | <a href="http://www.zjxu.edu.cn/first/">嘉兴学院</a> 
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script>
+		$(function (){
+			$('#bookingForm').bookingForm({
+				ownerEmail: '#'
+			});
+		})
+		</script>
+	</body>
+</html>
